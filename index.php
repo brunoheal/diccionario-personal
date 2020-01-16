@@ -1,9 +1,9 @@
 <?php session_start();?>
 <?php include('include/reporteErrores.php'); ?>
 <?php include('baseDeDatos/conexionBaseDeDatos.php');?>
-<?php $controlador = 1 ?>
+<?php $controlador = 2 ?>
 <?php include('php/funciones.php'); ?>
-<?php //verificarSesion(); ?>
+<?php verificarSesion(); ?>
 <?php include('include/encabezado.php'); ?>
 <?php include('include/barraNavegacion.php'); ?>
 <?php include('include/mostrarImagen.php'); ?>
