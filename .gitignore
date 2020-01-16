@@ -23,6 +23,11 @@ iniciarSesion.php
 cerrarSesion.php
 formularioIniciarSesion.php
 formularioRegistro.php
+pie.php
+encabezado.php
+reporteErrores.php
+mostrarImagen.php
+barraNavegacion.php
 
 
 
