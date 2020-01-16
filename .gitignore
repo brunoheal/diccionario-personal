@@ -1,0 +1,28 @@
+#base de datos
+datosBaseDeDatos.php
+
+#carpeta de imágenes
+imagenes/**
+
+#cookieAlert
+cookieAlert.css
+cookieAlert.js
+
+#política de privacidad
+politicaDePrivacidad.php
+
+#carpeta de php mailer y enviar nueva clave
+PHP MAILER/**
+enviarNuevaClave.php
+
+#archivos
+estilos.css
+funciones.js
+funciones.php
+iniciarSesion.php
+cerrarSesion.php
+formularioIniciarSesion.php
+formularioRegistro.php
+
+
+
