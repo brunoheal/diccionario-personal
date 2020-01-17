@@ -19,19 +19,16 @@ enviarNuevaClave.php
 estilos.css
 funciones.js
 funciones.php
-cerrarSesion.php
 formularioRegistro.php
 pie.php
-encabezado.php
 reporteErrores.php
-mostrarImagen.php
 barraNavegacion.php
 formularioAgregarPalabra.php
 formularioModificarPalabra.php
 agregarGrupo.php
 modificarPalabra.php
 modificarGrupo.php
-agregarPalabra.php
+
 
 
 
