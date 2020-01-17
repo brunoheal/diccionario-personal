@@ -50,6 +50,24 @@ endif; ?>
     </div>
 </div>
 
-<?php include('include/formularioIniciarSesion.php'); ?>
+<div class="container">
+    <form action="#" onsubmit="return validarFormulario();" method="post">
+        <div class="form-group">
+            <label for="nombreUsuario">Nombre:</label>
+            <input type="text" class="form-control" name="nombreUsuario" id="nombreUsuario" />
+            <div id="js_nombreUsuario"></div>
+        </div>
+        <div class="form-group">
+            <label for="contra">Contraseña:</label>
+            <input type="password" class="form-control" name="contra" id="contra" />
+            <div id="js_contra"></div>
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="formulario" id="formulario" value="iniciarSesion" />
+        </div>
+        <button type="submit" name="submit" class="btn b_btn-1">Entrar</button>
+    </form>
+</div>
+
 <?php mysqli_close($mysqli); ?>
 <?php include('include/pie.php') ?>

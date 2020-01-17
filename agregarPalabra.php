@@ -4,6 +4,7 @@
 <?php $controlador = 3; ?>
 <?php $titulo = 'Añadir Palabra'; ?>
 <?php include('php/funciones.php'); ?>
+<?php verificarSesion(); ?>
 <?php include('include/encabezado.php'); ?>
 <?php include('include/barraNavegacion.php'); ?>
 <?php include('include/mostrarImagen.php'); ?>

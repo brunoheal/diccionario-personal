@@ -20,7 +20,6 @@ estilos.css
 funciones.js
 funciones.php
 cerrarSesion.php
-formularioIniciarSesion.php
 formularioRegistro.php
 pie.php
 encabezado.php
@@ -28,10 +27,11 @@ reporteErrores.php
 mostrarImagen.php
 barraNavegacion.php
 formularioAgregarPalabra.php
-formularioAgregarGrupo.php
+formularioModificarPalabra.php
 agregarGrupo.php
 modificarPalabra.php
 modificarGrupo.php
+agregarPalabra.php
 
 
 
