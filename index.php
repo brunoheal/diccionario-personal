@@ -8,13 +8,20 @@
 <?php include('include/barraNavegacion.php'); ?>
 <?php include('include/mostrarImagen.php'); ?>
 
-
 <div class="row">
     <div class="col text-center">
-        <h1>Bienvenido a su diccionario de inglés personal</h1>
+<?php if (!empty($_SESSION['mensaje1'])): ?>
+    <h1><?= $saludo = saludo() . " " . ucwords($_SESSION['nombre']); ?></h1>
+    <h2><?= $_SESSION['mensaje1']; ?></h2>
+    <p>Muévase por la barra de navegación para dirigirse a donde desee.</p>
+    <?php unset($_SESSION['mensaje1']); ?>
+
+<?php else: ?>
+        <h1>Bienvenido a su diccionario de inglés personal</h1>       
         <p>Muévase por la barra de navegación para dirigirse a donde desee.</p>
-    </div>
+<?php endif; ?>
 </div>
+    </div>
 
 <?php // Bloque alerta cookies ?>
 <div class="alert text-center cookiealert" role="alert">
