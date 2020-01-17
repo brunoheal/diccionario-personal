@@ -27,6 +27,11 @@ encabezado.php
 reporteErrores.php
 mostrarImagen.php
 barraNavegacion.php
+formularioAgregarPalabra.php
+formularioAgregarGrupo.php
+agregarGrupo.php
+modificarPalabra.php
+modificarGrupo.php
 
 
 

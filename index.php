@@ -2,6 +2,7 @@
 <?php include('include/reporteErrores.php'); ?>
 <?php include('baseDeDatos/conexionBaseDeDatos.php');?>
 <?php $controlador = 2 ?>
+<?php $titulo = 'Página Principal'; ?>
 <?php include('php/funciones.php'); ?>
 <?php verificarSesion(); ?>
 <?php include('include/encabezado.php'); ?>
@@ -11,7 +12,7 @@
 <div class="row">
     <div class="col text-center">
 <?php if (!empty($_SESSION['mensaje1'])): ?>
-    <h1><?= $saludo = saludo() . " " . ucwords($_SESSION['nombre']); ?></h1>
+    <h1><?= $saludo = saludo() . " " . ucwords($_SESSION['nombreUsuario']); ?></h1>
     <h2><?= $_SESSION['mensaje1']; ?></h2>
     <p>Muévase por la barra de navegación para dirigirse a donde desee.</p>
     <?php unset($_SESSION['mensaje1']); ?>
