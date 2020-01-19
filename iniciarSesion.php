@@ -42,7 +42,6 @@ endif; ?>
     <h1><?= $_SESSION['mensaje1']; ?></h1>
     <p><?= $_SESSION['mensaje2']; ?></p>
     <?php unset($_SESSION['mensaje1'], $_SESSION['mensaje2']); ?>     
-
 <?php else: ?>
     <h1>Inicie sesión o <a href="registro.php">regístrese</a></h1>       
     <p>¿Ha perdido su contraseña? Entre <a href="nuevaContra.php">aquí</a>.</p>   
