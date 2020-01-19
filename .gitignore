@@ -16,18 +16,20 @@ PHP MAILER/**
 enviarNuevaClave.php
 
 #archivos
+reporteErrores.php
 estilos.css
 funciones.js
 funciones.php
 formularioRegistro.php
-pie.php
-reporteErrores.php
-barraNavegacion.php
 formularioAgregarPalabra.php
 formularioModificarPalabra.php
 agregarGrupo.php
 modificarPalabra.php
 modificarGrupo.php
+mostrarPalabra.php
+mostrarGrupo.php
+registro.php
+nuevaContra.php
 
 
 

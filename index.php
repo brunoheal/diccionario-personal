@@ -21,8 +21,8 @@
         <h1>Bienvenido a su diccionario de inglés personal</h1>       
         <p>Muévase por la barra de navegación para dirigirse a donde desee.</p>
 <?php endif; ?>
-</div>
     </div>
+</div>
 
 <?php // Bloque alerta cookies ?>
 <div class="alert text-center cookiealert" role="alert">

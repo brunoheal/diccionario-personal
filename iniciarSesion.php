@@ -44,8 +44,8 @@ endif; ?>
     <?php unset($_SESSION['mensaje1'], $_SESSION['mensaje2']); ?>     
 
 <?php else: ?>
-    <h1>Inicie sesión o <a href="#">regístrese</a></h1>       
-    <p>¿Ha perdido su contraseña? Entre <a href="#">aquí</a>.</p>   
+    <h1>Inicie sesión o <a href="registro.php">regístrese</a></h1>       
+    <p>¿Ha perdido su contraseña? Entre <a href="nuevaContra.php">aquí</a>.</p>   
 <?php endif; ?>
     </div>
 </div>

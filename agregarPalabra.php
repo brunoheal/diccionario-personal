@@ -16,7 +16,7 @@
         $idGrupo = filtrado($_GET['idGrupo']);
         $idUsuario = filtrado($_SESSION['idUsuario']);
         
-        $consulta = "SELECT palabraOriginal FROM palabra WHERE palabraOriginal = '" . $palabraOriginal . "' AND idUsuario = '" . $idUsuario . "'";
+        $consulta = "SELECT palabraOriginal FROM palabra WHERE palabraOriginal ='" . $palabraOriginal . "' AND idUsuario ='" . $idUsuario . "'";
         $resultado = mysqli_query($mysqli, $consulta);
     
         if (mysqli_num_rows($resultado) > 0):
@@ -40,7 +40,7 @@
                    
             endif;
         endif;
-    mysqli_free_result($resultado);    
+        mysqli_free_result($resultado);    
     else:
         // Faltan datos
         $_SESSION['mensaje1'] = "Tiene que enviar un término en inglés y su significado en español para poder guardarlo";
@@ -56,12 +56,41 @@ endif; ?>
         <?php unset($_SESSION['mensaje1'], $_SESSION['mensaje2']); ?>     
     <?php else: ?>
         <h1 class="text-center">Introduzca una palabra en inglés con su traducción al español:</h1>
+        <div class="container text-left">
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label for="palabraOriginal">Palabra:</label>
+                <?php $consulta = "SELECT nombreGrupo FROM grupo WHERE idUsuario ='" . $_SESSION['idUsuario'] . "' LIMIT 1"; ?>
+                <?php $resultado = mysqli_query($mysqli, $consulta); ?>
+                <?php if (mysqli_num_rows($resultado) > 0): ?>
+                    <input type="text" class="form-control" name="palabraOriginal" />
+                
+                <?php else: ?>
+                    <input type="text" class="form-control" name="palabraOriginal" data-toggle="popover" data-placement="top" data-content="Tiene que entrar primero a 'mis grupos' para crear un grupo e ir añadiendo sus palabras al mismo" />
+                <?php endif; ?>
+                </div>
+                <div class="form-group">
+                    <label for="significadoPalabra">Traducción:</label>
+                    <input type="text" class="form-control" name="significadoPalabra" />
+                </div>
+                <div class="form-group">
+                    <label for="idGrupo">Grupo:</label>
+                    <select class="form-control" name="idGrupo">
+                    <?php $consulta2 = "SELECT nombreGrupo, idGrupo FROM grupo WHERE idUsuario = '" . $_SESSION['idUsuario'] . "'"; ?>
+                    <?php $resultado2 = mysqli_query($mysqli, $consulta2); ?>
+                    <?php while ($filas = mysqli_fetch_assoc($resultado2)): ?>
+                        <option value="<?= $filas['idGrupo']; ?>"><?= ucwords($filas['nombreGrupo']); ?></option>
+                    <?php endwhile; ?>
+                    </select>
+                </div>       
+                <button type="submit" name="submit" class="btn b_btn-1 mr-3">Añadir</button>
+                <a href="modificarGrupo.php?accion=listar" class="btn b_btn-1">Mis grupos</a>
+            </form>
+        </div>
+        <?php mysqli_free_result($resultado2); ?>
     <?php endif; ?>
     </div>
 </div>
 
-<?php include('include/formularioAgregarPalabra.php'); ?>
-
-<?php mysqli_free_result($resultado2); ?>
 <?php mysqli_close($mysqli); ?>
 <?php include('include/pie.php'); ?>
