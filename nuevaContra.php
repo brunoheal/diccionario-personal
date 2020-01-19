@@ -43,7 +43,6 @@
     endif;
 endif; ?>
 
-
 <div class="row">
     <div class="col text-center">
 <?php if (!empty($_SESSION['mensaje1'])): ?>
@@ -76,8 +75,6 @@ endif; ?>
         <a href="javascript:history.back()" class="btn b_btn-1">Volver atrás</a>
     </form>
 </div>
-
-
 
 <?php mysqli_close($mysqli); ?>
 <?php include('include/pie.php') ?>
