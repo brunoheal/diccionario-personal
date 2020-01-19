@@ -56,7 +56,7 @@ endif; ?>
         <?php unset($_SESSION['mensaje1'], $_SESSION['mensaje2']); ?>     
     <?php else: ?>
         <h1 class="text-center">Introduzca una palabra en inglés con su traducción al español:</h1>
-        <div class="container text-left">
+        <div class="form-container text-left">
             <form action="#" method="get">
                 <div class="form-group">
                     <label for="palabraOriginal">Palabra:</label>

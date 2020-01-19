@@ -33,7 +33,7 @@
         else:
             // No han pasado la validación
             $_SESSION['mensaje1'] = "Nombre o correo electrónico incorrectos";
-            $_SESSION['message2'] = "Por favor, revisa los datos y vuelve a intentarlo";
+            $_SESSION['mensaje2'] = "Por favor, revisa los datos y vuelve a intentarlo";
         endif;
     
     else:
@@ -58,18 +58,22 @@ endif; ?>
 </div>
 
 <div class="form-container">
-    <form action="#" onsubmit="return validarFormulario();" method="post">
+    <form action="#" onsubmit="return validarNuevaContra();" method="post">
         <div class="form-group">
             <label for="nombreUsuario">Nombre:</label>
-            <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" />
+                <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" />
             <div id="js_nombreUsuario"></div>
         </div>
         <div class="form-group">
-            <label for="correo">Correo electrónico</label>
-            <input type="text" name="correo" class="form-control" id="correo" />
+            <label for="correo">Correo electrónico:</label>
+                <input type="text" name="correo" class="form-control" id="correo" />
             <div id="js_correo"></div>
         </div>
-        <button type="submit" name="submit" class="btn b_btn-1">Enviar</button>
+        <div class="form-group">
+            <input type="hidden" name="formulario" id="formulario" value="nuevaContra" />
+        </div>
+        <button type="submit" name="submit" class="btn b_btn-1 mr-2">Enviar</button>
+        <a href="javascript:history.back()" class="btn b_btn-1">Volver atrás</a>
     </form>
 </div>
 

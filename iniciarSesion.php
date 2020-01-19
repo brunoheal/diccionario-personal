@@ -27,6 +27,10 @@
             mysqli_free_result($resultado);
             mysqli_close($mysqli);
             redireccion('index.php');
+        
+        else:
+            $_SESSION['mensaje1'] = 'Inicio de sesión incorrecto';
+            $_SESSION['mensaje2'] = 'Por favor, vuelva a intentarlo de nuevo.';
         endif;
     else:
         $_SESSION['mensaje1'] = 'Inicio de sesión incorrecto';
@@ -49,8 +53,8 @@ endif; ?>
     </div>
 </div>
 
-<div class="container">
-    <form action="#" onsubmit="return validarFormulario();" method="post">
+<div class="form-container">
+    <form action="#" onsubmit="return validarIniciarSesion();" method="post">
         <div class="form-group">
             <label for="nombreUsuario">Nombre:</label>
             <input type="text" class="form-control" name="nombreUsuario" id="nombreUsuario" />

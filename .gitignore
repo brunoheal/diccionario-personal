@@ -13,10 +13,9 @@ politicaDePrivacidad.php
 
 #carpeta de php mailer y enviar nueva clave
 PHP MAILER/**
-enviarNuevaClave.php
+enviarNuevaContra.php
 
 #archivos
-enviarNuevaContra.php
 reporteErrores.php
 estilos.css
 funciones.js
@@ -26,7 +25,7 @@ modificarPalabra.php
 modificarGrupo.php
 mostrarPalabra.php
 mostrarGrupo.php
-
+README.md
 
 
 

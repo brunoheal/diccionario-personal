@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php include('include/reporteErrores.php'); ?>
 <?php include('baseDeDatos/conexionBaseDeDatos.php');?>
-<?php $controlador = 2 ?>
+<?php (!empty($_SESSION['mensaje1'])) ? $controlador = 2 : $controlador = 3 ?>
 <?php $titulo = 'Página Principal'; ?>
 <?php include('php/funciones.php'); ?>
 <?php verificarSesion(); ?>

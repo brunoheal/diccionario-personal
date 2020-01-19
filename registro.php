@@ -66,29 +66,33 @@ endif; ?>
 
 <?php if (empty($_SESSION['mensaje1'])): ?>
     <h1 class="text-center">Introduzca los datos requeridos para registrarse:</h1>
-    <div class="container">
-        <form action="#" onsubmit="return validarFormulario();" method="post">   
+    <div class="form-container">
+        <form action="#" onsubmit="return validarRegistro();" method="post">   
             <div class="form-group">
                 <label for="nombreUsuario">Nombre:</label>
-                <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario">
+                    <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" />
                 <div id="js_nombreUsuario"></div>
             </div>
             <div class="form-group">
                 <label for="correo">Correo electrónico:</label>
-                <input type="text" name="correo" class="form-control" id="correo">
+                    <input type="text" name="correo" class="form-control" id="correo" />
                 <div id="js_correo"></div>
             </div>
             <div class="form-group">
                 <label for="contra">Contraseña:</label>
-                <input type="password" name="contra" class="form-control" id="contra">
+                    <input type="password" name="contra" class="form-control" id="contra" />
                 <div id="js_contra"></div>
             </div>
             <div class="form-group">
                 <label for="contra2">Repita contraseña:</label>
-                <input type="password" name="contra2" class="form-control" id="contra2">
+                    <input type="password" name="contra2" class="form-control" id="contra2" />
                 <div id="js_contra2"></div>
-            </div>        
-            <button type="submit" name="submit" class="btn b_btn-1">Registrar</button>
+            </div> 
+            <div class="form-group">
+                <input type="hidden" name="formulario" id="formulario" value="registro" />
+            </div>       
+            <button type="submit" name="submit" class="btn b_btn-1 mr-2">Registrar</button>
+            <a href="javascript:history.back()" class="btn b_btn-1">Volver atrás</a>
         </form>
     </div>
 <?php else: ?>
