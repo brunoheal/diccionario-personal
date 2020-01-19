@@ -1,0 +1,75 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css?family=Domine|Signika&display=swap');
+
+/* Navbar y footer */
+.container-fluid {
+    height: 50px;
+    font-family: 'Signika', sans-serif;
+}
+
+/* Cuerpo páginas excepto navbar y footer */
+.container {
+    font-family: 'Domine', serif;
+}
+
+/* Formularios */
+.form-container {
+    padding: 0;
+}
+
+/* Enlaces */
+a {
+    color: #F7819F;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Botón añadir grupos */
+.b_btn-1 {
+    color: #ffffff;
+    background-color: #FAAC58;
+    border-color: #FAAC58;
+}
+
+/* Al pasar ratón botón */
+.btn:hover, a:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.bh_esp:hover {
+    color: #ffffff !important; 
+}
+
+/* Margen inferior arriba footer */
+.b_mb {
+    margin-bottom: 70px;
+}
+
+/* Color del cuerpo */
+.body {
+   background: #F8E0E6; 
+}
+
+/* Color del interior del input text y del select */
+input[type="text"], input[type="password"], select {
+    background: #F2F2F2 !important;    
+}
+
+/* Para que se quite el margen en pantallas pequeñas */
+@media (max-width: 500px) {
+    .b_ml {
+        margin: 0px !important;
+    }  
+}
+
+/* Margen navbar título */
+.b_ml {
+    margin-left: 100px;
+}
+
+/* Margen navbar menú */
+.b_mr {
+    margin-right: 100px;
+}
+
